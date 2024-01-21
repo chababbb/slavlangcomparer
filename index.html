@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="container">
+        <script src="js/script.js"></script>
+        <div>
+            <div class="typer">
+                <div class="pick">
+                    <div class="lang_pick"><p class="intel">Выберите язык...</p></div>
+                    <input class="word_insert" type="text" name="" id="" placeholder="Введите слово...">
+                </div>
+                <script>
+                    function compareResult () {
+                        const button = document.getElementsByClassName("btn-compare");
+                        if (button.hasAttribute("clicked")) {
+                            return;
+                        }
+                        button.setAttribute("clicked", true);
+
+                        let divElem = document.querySelector ('.result');
+                        let rText = document.createElement ('div');
+
+                        rText.innerHTML = "Результаты сравнения";
+                        rText.className = 'r_text'
+                        divElem.insertAdjacentHTML (
+                            'beforeend', `<div class='result-container'><span class='comp'>Русский</span><span class='late-cript'><span class='comp'>Высокий</span><span id='transcript' class='comp'>высокий</span></span><span class='comp'>Схожесть</span></div>`
+                        );
+                        divElem.prepend (rText);
+                        document.body.appendChild (div);
+
+                    }
+                </script>
+                <button class="btn-compare" onclick="compareResult()">Сравнить</button>
+            </div>
+            <div class="result"></div>
+        </div>
+    </body>
+</html>

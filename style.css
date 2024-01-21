@@ -1,0 +1,142 @@
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F7F7F7;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.head {
+    width: 1200px;
+    height: 120px;
+}
+
+div {
+    display: flex;
+    /* width: 1200px; */
+    /* height: 1080px; */
+    /* padding-bottom: 1062px; */
+    flex-direction: column;
+    align-items: center;
+    vertical-align:middle;
+}
+
+h1 {
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Merriweather;
+    font-size: 38px;
+}
+
+.intel, .wide, h1, .r_text, .comp {
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    margin:0;
+}
+
+.intel {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: 'Merriweather', serif;
+    height: 26px;
+}
+
+.wide {
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+}
+
+.typer {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    /* width: 570px; */
+    height: 960px;
+    justify-content: center;
+}
+
+.pick {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.lang_pick {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.60);;
+    width:197px;
+}
+
+.word_insert {
+    font-family: inherit;
+    font-size:38px;
+    display: flex;
+    width: 570px;
+    padding: 28px 40px;
+    align-items: flex-start;
+    gap: 10px;
+    border: 2px solid #000;
+    background-color: transparent;
+}
+
+.btn-compare {
+    font-family: Helvetica;
+    font-size: 22px;
+    display: flex;
+    padding: 14px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #FAC3FF;
+    border-color: transparent;
+}
+
+.result {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 1160px;
+}
+
+.r_text {
+    font-family: Helvetica;
+    font-size: 28px;
+}
+
+.comp {
+    color: rgba(0, 0, 0, 0.75);
+    font-family: Merriweather;
+    font-size: 22px;
+}
+
+.result-container {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 286px;
+}
+
+.late-cript {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#transcript {
+    margin-left: auto;
+}
