@@ -29,7 +29,7 @@ div {
 
 h1 {
     color: rgba(0, 0, 0, 0.60);
-    font-family: Merriweather;
+    font-family: 'Georgia', serif;
     font-size: 38px;
 }
 
@@ -43,7 +43,7 @@ h1 {
 .intel {
     font-size: 22px;
     color: rgba(0, 0, 0, 0.60);
-    font-family: 'Merriweather', serif;
+    font-family: 'Georgia', serif;
     height: 26px;
 }
 
@@ -69,17 +69,17 @@ h1 {
     gap: 14px;
 }
 
-.lang_pick {
+.langPick {
     display: flex;
     padding: 10px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border: 2px solid rgba(0, 0, 0, 0.60);;
-    width:197px;
+    width:220px;
 }
 
-.word_insert {
+.wordInsert {
     font-family: inherit;
     font-size:38px;
     display: flex;
@@ -91,7 +91,7 @@ h1 {
     background-color: transparent;
 }
 
-.btn-compare {
+#btn-compare {
     font-family: Helvetica;
     font-size: 22px;
     display: flex;
@@ -104,12 +104,17 @@ h1 {
     border-color: transparent;
 }
 
-.result {
-    display: inline-flex;
+.hidden {
+    display: none;
+}
+
+#result {
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
     width: 1160px;
+    padding-bottom: 120px;
 }
 
 .r_text {
@@ -123,20 +128,95 @@ h1 {
     font-size: 22px;
 }
 
-.result-container {
-    display: inline-flex;
-    align-items: flex-start;
-    flex-direction: row;
-    gap: 286px;
+.resultContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    font-size: 22px;
+    font-family: 'georgia', serif;
 }
 
-.late-cript {
+.langComp {
     display: flex;
-    width: 350px;
-    justify-content: space-between;
     align-items: flex-start;
+    gap: 80px;
+    flex-direction: row;
+}
+
+.anotherLanguage {
+    display: flex;
+    padding: 14px;
+    align-items: flex-start;
+    gap: 298px;
+    align-self: stretch;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+}
+
+.collector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.origLang {
+    display: flex;
+    width: 170px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.lateCript {
+    flex: 2;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.cript, .late {
+    display: flex;
+    width: 275px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cut {
+    padding-left: 4px;
+}
+
+.compatibility {
+    display: flex;
+    width: 170px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#moreInfo {
+    display: none;
+    width: 1129.003px;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 #transcript {
     margin-left: auto;
+}
+
+ul {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
