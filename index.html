@@ -7,34 +7,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="container">
-        <script>
-            function showDiv() {
-                if (document.getElementById('result').style.display != 'inline-flex') {
-                    document.getElementById('result').style.display = 'inline-flex';
-                } else {
-                    document.getElementById('result').style.display = 'none';
-                }
-                return true;
-            }
-        </script>
-        <script>
-            function showMore () { 
-                if (document.getElementById('moreInfo').style.display != 'flex') {
-                    // document.getElementsByTagName('svg').style.transform = 'rotate(180deg)';
-                    document.getElementById('moreInfo').style.display = 'flex';
-                } else {
-                    document.getElementById('moreInfo').style.display = 'none';
-                }
-                return true;
-            }
-        </script>
         <div>
             <div class="typer">
                 <div class="pick">
                     <div class="langPick"><p class="intel">Выберите язык...</p></div>
-                    <input class="wordInsert" type="text" name="" id="" placeholder="Введите слово...">
+                    <input class="wordInsert" type="text" placeholder="Введите слово..." maxlength="20">
                 </div>
-                <button id="btn-compare" onclick="showDiv()">Сравнить</button>
+                <button id="btn-compare" onclick="write()">Сравнить</button>
             </div>
             <div id="result" class="">
                 <div class="r_text">Результаты сравнения</div>
@@ -43,10 +22,10 @@
                         <div class="origLang">
                             <span>Русский</span>
                         </div>
-                        <div class="cript">
-                            <span>Высокий</span>
-                        </div>
                         <div class="late">
+                            <span></span>
+                        </div>
+                        <div class="cript">
                             <span>Высокий</span>
                         </div>
                         <div class="compatibility">
@@ -59,20 +38,20 @@
                                 <div class="origLang">
                                     <span>Белорусский</span>
                                 </div>
-                                <div class="cript">
+                                <div class="late" id="by_late">
+                                    <span></span>
+                                </div>
+                                <div class="cript" id="by_cript">
                                     <span>Высокий</span>
                                 </div>
-                                <div class="late">
-                                    <span>Высокий</span>
-                                </div>
-                                <div class="compatibility" id="cut" onclick="showMore()">
+                                <div class="compatibility" id="cut">
                                     <span>Сильная</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M5.5 9L12.5 16L19.5 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div id="moreInfo">Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
+                            <div class="dropdownContent">Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
                                 (на базе какого-нибудь алгоритма)</div>
                         </div>
                     </div>
@@ -88,14 +67,14 @@
                                 <div class="late">
                                     <span>Высокий</span>
                                 </div>
-                                <div class="compatibility" id="cut" onclick="showMore()">
+                                <div class="compatibility" id="cut">
                                     <span>Сильная</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M5.5 9L12.5 16L19.5 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div id="moreInfo">Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
+                            <div>Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
                                 (на базе какого-нибудь алгоритма)</div>
                         </div>
                     </div>
@@ -111,14 +90,14 @@
                                 <div class="late">
                                     <span>Высокий</span>
                                 </div>
-                                <div class="compatibility" id="cut" onclick="showMore()">
+                                <div class="compatibility" id="cut">
                                     <span>Сильная</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M5.5 9L12.5 16L19.5 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div id="moreInfo">Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
+                            <div>Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
                                 (на базе какого-нибудь алгоритма)</div>
                         </div>
                     </div>
@@ -134,19 +113,20 @@
                                 <div class="late">
                                     <span>Высокий</span>
                                 </div>
-                                <div class="compatibility" id="cut" onclick="showMore()">
+                                <div class="compatibility" id="cut">
                                     <span>Сильная</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                         <path d="M5.5 9L12.5 16L19.5 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div id="moreInfo">Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
+                            <div>Здесь будет либо краткое, либо развернутое пояснение схожести слова в языках 
                                 (на базе какого-нибудь алгоритма)</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="js/script.js"></script>
     </body>
 </html>
