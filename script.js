@@ -19,15 +19,6 @@ function write() {
 
     let totext = document.querySelector('.late').value;
 
-    targetLanguages.forEach(targetLanguage => {
-        let apiURL = `https://api.mymemory.translated.net/get?q=${fromtext}!&langpair=ru|${targetLanguage}`;
-        fetch(apiURL).then(res => res.json()).then(data => {
-            const translate = data.responseData.translatedText + targetLanguage;
-            console.log (translate);
-            document.querySelector('.late').innerHTML = translate;
-        });
-    });
-
     // function showDiv (){}
     if (document.getElementById('result').style.display != 'inline-flex') {
         document.getElementById('result').style.display = 'inline-flex';
