@@ -2,9 +2,9 @@ let button = document.querySelector('button');
 document.querySelector('button').onclick = write;
 
 function formatText(text) {
-    let noPunctuation = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-   // let capitalized = noPunctuation.charAt(0).toUpperCase() + noPunctuation.slice(1).toLowerCase();
-    return noPunctuation;
+    //let noPunctuation = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    let capitalized = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    return capitalized ;
 }
 
 
