@@ -1,34 +1,25 @@
-//const fromText = document.querySelectorAll('.wordInsert'),
-//translate = document.querySelector('button');
-
 let button = document.querySelector('button');
-//let fromtext = document.querySelector('.wordInsert').value;
 document.querySelector('button').onclick = write;
-//fromtext.addEventListener ('input', write());
 
-//if(document.querySelector(".wordInsert").value==="") { 
-    //button.disabled = true; 
-//} else { 
-   // button.disabled = false;
-//}
+function formatText(text) {
+    //let noPunctuation = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    let capitalized = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    return capitalized ;
+}
+
 
 function write() {
     let fromtext = document.querySelector('.wordInsert').value;
-    document.querySelector('.late').innerHTML = fromtext;
-    const targetLanguages = ['be', 'bs', 'bg', 'cs', 'hr', 'mk', 'pl', 'sk', 'sl', 'sr', 'uk'];
-
-    let totext = document.querySelector('.late').value;
-
+    const targetLanguages = ['be', 'uk', 'pl', 'cs','hr', 'bs', 'sk', 'sl', 'sr', 'bg', 'mk'];
     targetLanguages.forEach(targetLanguage => {
         let apiURL = `https://api.mymemory.translated.net/get?q=${fromtext}!&langpair=ru|${targetLanguage}`;
         fetch(apiURL).then(res => res.json()).then(data => {
-            const translate = data.responseData.translatedText + targetLanguage;
+            let translate = data.responseData.translatedText;
+	    translate = formatText(translate);
             console.log (translate);
-            document.querySelector('.late').innerHTML = translate;
+            document.querySelector(`.${targetLanguage}`).innerHTML = translate;
         });
     });
-
-    // function showDiv (){}
     if (document.getElementById('result').style.display != 'inline-flex') {
         document.getElementById('result').style.display = 'inline-flex';
     }
